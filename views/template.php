@@ -13,12 +13,12 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">Accueil
+          <a class="nav-link active" href="accueil">Accueil
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="livres.php">Livres</a>
+          <a class="nav-link" href="livres">Livres</a>
         </li>
       </ul>
       <form class="d-flex">

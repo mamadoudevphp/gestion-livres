@@ -1,12 +1,8 @@
 <?php
-require_once("Book.class.php");
-require_once("BookManager.class.php");
-
-
-$book_manager = new BookManager();
-$book_manager->LoadBooks();
-
+require_once("controllers/Book.class.php");
+require_once("models/BookManager.class.php");
 ob_start() ?>
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -17,11 +13,11 @@ ob_start() ?>
     </tr>
   </thead>
   <tbody>
-    <?php for($i = 0; $i< count($book_manager->getBooks()); $i++) : ?>
+    <?php for($i = 0; $i< count($books); $i++) : ?>
         <tr class="table-info">
-            <td class="align-middle"><img src="./public/assets/images/<?= $book_manager->getBooks()[$i]->getImage() ?>" width="100px" height="auto" /></td>
-            <td class="align-middle"><?= $book_manager->getBooks()[$i]->getTitle() ?></td>
-            <td class="align-middle"><?= $book_manager->getBooks()[$i]->getNbPages() ?></td>
+            <td class="align-middle"><img src="./public/assets/images/<?= $books[$i]->getImage() ?>" width="100px" height="auto" /></td>
+            <td class="align-middle"><?= $books[$i]->getTitle() ?></td>
+            <td class="align-middle"><?= $books[$i]->getNbPages() ?></td>
             <td class="align-middle"><a href="" class="btn btn-warning">Modifier</a></td>
             <td class="align-middle"><a href="" class="btn btn-primary" >Supprimer</a></td>
         </tr>
@@ -35,5 +31,5 @@ ob_start() ?>
 <?php
 $content = ob_get_clean();
 $title = "Livres de la bibliothèque Cheikh Anta DIOP";
-require_once("template.php");
+require_once("views/template.php");
 ?>

@@ -1,6 +1,6 @@
 <?php
-require_once("Connection.model.php");
-require_once("Book.class.php");
+require_once("models/Connection.model.php");
+require_once("controllers/Book.class.php");
 class BookManager extends Connection{
     private $books;
 
